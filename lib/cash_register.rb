@@ -24,11 +24,8 @@ class CashRegister
       "After the discount, the total comes to $#{@total.to_i}."
     end
   end
-end
+
 
   def void_last_transaction
     @total = @total - @last_price
   end
-
-
-end
