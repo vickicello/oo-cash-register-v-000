@@ -8,7 +8,7 @@ class CashRegister
     @items = []
   end
 
-  def add_item(title, price, quantity =1)
+  def add_item(title, price, quantity = 1)
     @total += price * quantity
       @items << title
     end
@@ -18,17 +18,17 @@ class CashRegister
   def apply_discount
     if @discount == nil
       "There is no discount to apply."
-    else 
+    else
       percentage = @discount.to_f/100
       @total = @total - (@total * percentage)
       "After the discount, the total comes to $#{@total.to_i}."
     end
   end
+end
 
   def void_last_transaction
     @total = @total - @last_price
   end
-
 
 
 end
