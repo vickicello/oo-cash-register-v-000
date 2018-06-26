@@ -5,11 +5,12 @@ class CashRegister
   end
 
   def discount
-    cash_register_with_discount = @total * .2
+    employee_discount = (20.to_f / 100) * @total
+    cash_register_with_discount = @total - employee_discount
   end
   cash_register_with_discount
   end
-  
+
 
 
 
